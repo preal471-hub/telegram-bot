@@ -74,7 +74,7 @@ def broadcast(message):
 
     bot.reply_to(message,"Broadcast sent!")
 
-if name == "__main__":
+if __name__ == "__main__":
     threading.Thread(target=run_web).start()
     bot.infinity_polling()
 
