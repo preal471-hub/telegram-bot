@@ -6,7 +6,8 @@ import os
 from flask import Flask
 import threading
 
-TOKEN = os.environ.get("8266089449:AAEUivdYzOEhVbjAzC4UBVry-Z3HVKIurMo")   # IMPORTANT for Render
+# 👇 Render will read token from Environment Variables
+TOKEN = os.environ.get("BOT_TOKEN")
 CHANNEL_ID = -1002280087377
 
 bot = telebot.TeleBot(TOKEN)
@@ -76,3 +77,4 @@ def broadcast(message):
 if name == "__main__":
     threading.Thread(target=run_web).start()
     bot.infinity_polling()
+
